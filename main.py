@@ -6,7 +6,7 @@ import pandas as pd
 app = Flask(__name__)
 cors = CORS(app)
 
-movies_dataset = pd.read_csv("C:/Users/srihari/Desktop/Haridas/College/Datasets/movie/IMDb movies.csv/IMDb movies.csv")
+movies_dataset = pd.read_csv("./IMDb movies.csv")
 field_list = list(movies_dataset.columns)
 last_indx = field_list.index('budget')
 movies_df = pd.DataFrame(movies_dataset[field_list[:last_indx+1]])
